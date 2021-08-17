@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:works/constants.dart';
 import 'package:works/screens/home_screen/home_screen.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Color(0xfff2f2f2),
+    statusBarColor: mainBackgroundColor,
     statusBarIconBrightness: Brightness.dark, // status bar color
   ));
   runApp(MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Works',
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xfff2f2f2),
+        scaffoldBackgroundColor: mainBackgroundColor,
         primarySwatch: Colors.teal,
       ),
       home: HomeScreen(),

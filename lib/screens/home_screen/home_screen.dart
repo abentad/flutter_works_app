@@ -27,14 +27,14 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: mainBackgroundColor,
         shadowColor: Colors.transparent,
         title: Image(image: AssetImage('assets/logo.png'), width: 100.0),
       ),
       body: homeItems[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        elevation: 0.0,
+        elevation: 5.0,
         items: [
           BottomNavigationBarItem(icon: FaIcon(FontAwesomeIcons.home), label: "Home"),
           BottomNavigationBarItem(icon: FaIcon(FontAwesomeIcons.briefcase), label: "Works"),

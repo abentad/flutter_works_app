@@ -4,7 +4,7 @@ import 'package:works/screens/home_screen/home_screen.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.white,
+    statusBarColor: Color(0xfff2f2f2),
     statusBarIconBrightness: Brightness.dark, // status bar color
   ));
   runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Works',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: Color(0xfff2f2f2),
         primarySwatch: Colors.teal,
       ),
       home: HomeScreen(),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:works/constants.dart';
+import 'package:works/screens/home_screen/components/home.dart';
 import 'package:works/screens/setting_screen/setting_screen.dart';
 import 'package:works/screens/user_screen/user_screen.dart';
 import 'package:works/screens/works_screen/work_screen.dart';
@@ -15,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
   List<Widget> homeItems = [
-    Text('Home'),
+    Home(),
     buildWorkScreen(),
     buildSettingScreen(),
     buildUserScreen(),
@@ -29,11 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
         shadowColor: Colors.transparent,
         title: Image(image: AssetImage('assets/logo.png'), width: 100.0),
       ),
-      body: Container(
-        child: Center(
-          child: homeItems[_selectedIndex],
-        ),
-      ),
+      body: homeItems[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         elevation: 0.0,
@@ -45,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
         backgroundColor: Colors.white,
         unselectedItemColor: Colors.black,
-        selectedItemColor: Colors.teal,
+        selectedItemColor: primaryColor,
         selectedFontSize: 14.0,
         unselectedFontSize: 14.0,
         showSelectedLabels: false,
